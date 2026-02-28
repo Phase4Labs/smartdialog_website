@@ -1,0 +1,3 @@
+[functions.server]
+#entrypoint = "functions/server/index.tsx"
+verify_jwt = false
