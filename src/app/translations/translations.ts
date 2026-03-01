@@ -8,7 +8,7 @@ export const translations = {
     services: 'SERVICES',
     more: 'MORE',
     about: 'About',
-    contact: 'CONTACT',
+    contact: 'Contact',
     
     // Hero Section
     welcome: 'WELCOME',
