@@ -1,14 +1,12 @@
+import { useTranslations } from "../translations/translations";
+import { Mail, MapPin, Phone, Clock, CheckCircle, AlertCircle } from "lucide-react";
+import { projectId, publicAnonKey, supabaseUrl } from "../../config/supabase";
 import { useState } from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { useLanguage } from "../contexts/LanguageContext";
-import { useTranslations } from "../translations/translations";
-import { Mail, MapPin, Phone, Clock, CheckCircle, AlertCircle } from "lucide-react";
-import { projectId, publicAnonKey } from "../../../utils/supabase/info.ts";
 
 export function ContactUs() {
-  const { language } = useLanguage();
-  const t = useTranslations(language);
+  const t = useTranslations("en");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +25,7 @@ export function ContactUs() {
 
     try {
       const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-47a5bf24/contact`,
+        `${supabaseUrl}/functions/v1/make-server-47a5bf24/contact`,
         {
           method: "POST",
           headers: {
@@ -91,6 +89,9 @@ export function ContactUs() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t.contactHeading}
             </p>
+            <p className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+              {t.contactSubheading}
+            </p>
           </div>
         </section>
 
@@ -100,9 +101,6 @@ export function ContactUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Left Side - Contact Form */}
               <div className="bg-white rounded-lg shadow-xl p-8 border border-gray-100">
-                <p className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
-                  {t.contactSubheading}
-                </p>
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-6"
