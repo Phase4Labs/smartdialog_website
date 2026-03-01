@@ -72,9 +72,11 @@ export function Services() {
                 <p className="text-lg leading-relaxed mb-6">
                   {t.alertsDescription}
                 </p>
-                <button className="bg-white text-gray-800 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors font-semibold">
-                  {t.learnMore}
-                </button>
+                <Link to="/ivr-details">
+                  <button className="bg-white text-gray-800 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors font-semibold">
+                    {t.learnMore}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -104,9 +106,11 @@ export function Services() {
                 <p className="text-lg  text-gray-600 leading-relaxed mb-6">
                   {t.userAuthDescription}
                 </p>
-                <button className="bg-white text-gray-800 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors font-semibold">
-                  {t.learnMore}
-                </button>
+                <Link to="/ivr-details">
+                  <button className="bg-white text-gray-800 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors font-semibold">
+                    {t.learnMore}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
