@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { SmartAssistant } from "./pages/SmartAssistant";
 import { Services } from "./pages/Services";
 import { ContactUs } from "./pages/ContactUs";
+import { IVRDetails } from "./pages/IVRDetails";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
   {
     path: "/services",
     Component: Services,
+  },
+  {
+    path: "/ivr-details",
+    Component: IVRDetails,
   },
   {
     path: "/contact-us",

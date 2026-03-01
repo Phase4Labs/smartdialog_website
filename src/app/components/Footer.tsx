@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTranslations } from '../translations/translations';
 
@@ -12,7 +12,7 @@ export function Footer() {
         {/* Social Media Icons */}
         <div className="flex justify-center gap-6 mb-8">
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/smartdialogai" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors"
@@ -20,7 +20,7 @@ export function Footer() {
             <Instagram className="w-6 h-6" />
           </a>
           <a 
-            href="https://x.com" 
+            href="https://www.linkedin.com/company/smart-dialog-ai/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors"
@@ -30,7 +30,7 @@ export function Footer() {
               viewBox="0 0 24 24" 
               fill="currentColor"
             >
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              <Linkedin className='w-6 h-6'/>
             </svg>
           </a>
         </div>
