@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 // Supabase configuration
 // For local development, falls back to hardcoded values
 // For production (Vercel), use environment variables

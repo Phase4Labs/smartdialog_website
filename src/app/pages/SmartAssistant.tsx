@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -134,9 +135,16 @@ export function SmartAssistant() {
                     </span>
                   </li>
                 </ul>
+                <a 
+                  href="http://members.smartdialog-ai.com/campaign.html" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-orange-500 transition-colors"
+                >
                 <button className="bg-gray-800 text-white px-8 py-3 rounded-md hover:bg-gray-900 transition-colors">
                   {t.subscribeNow}
                 </button>
+                </a>
               </div>
 
               {/* Right Side - Illustration */}
@@ -160,9 +168,14 @@ export function SmartAssistant() {
             <p className="text-xl mb-8">
               {t.readyForMoreSubtitle}
             </p>
-            <button className="bg-white text-gray-800 px-12 py-4 rounded-md hover:bg-gray-100 transition-colors font-semibold mb-12">
-              {t.contactUs}
-            </button>
+            <Link
+              to="/contact-us"
+              
+            >
+              <button className="bg-white text-gray-800 px-12 py-4 rounded-md hover:bg-gray-100 transition-colors font-semibold mb-12">
+                {t.contactUs}
+              </button>
+            </Link>
           </div>
         </section>
       </main>
